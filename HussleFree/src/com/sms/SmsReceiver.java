@@ -47,13 +47,6 @@ public class SmsReceiver extends BroadcastReceiver {
 			Log.d(null, "M"  + m);
 		}
 		
-try {
-	wait(3000);
-} catch (InterruptedException e) {
-	// TODO Auto-generated catch block
-	e.printStackTrace();
-}
-		
 		Cursor cursor = context.getContentResolver().query(Uri.parse("content://sms/inbox"), null, null, null, null);
 		
 		while (cursor.moveToNext()) {
@@ -69,7 +62,7 @@ try {
 			 }
 	    }
 
-//		abortBroadcast();
+		abortBroadcast();
 		Log.d(null, "Intent ReceivedVVVVVVVVVVVVVVVVVVVv end"  + intent.getAction());
 	}
 	
