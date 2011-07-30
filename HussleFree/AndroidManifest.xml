@@ -15,11 +15,13 @@
 		<receiver android:name=".SmsReceiver" >    
 		    <intent-filter android:priority="1">
 				<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+				<action android:name="android.provider.Telephony.SMS_PROVIDER" />
 		  </intent-filter> 
 		</receiver>		
     </application>
 	<uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.WRITE_SMS"/>
     <uses-permission android:name="android.permission.READ_SMS"/>
     <uses-permission android:name="android.permission.READ_CONTACTS"/>	
 
